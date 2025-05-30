@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI-Native Travel Platform – Invite Form Replica
 
-## Getting Started
+This project is a pixel-perfect, modern invite form built as part of a frontend assignment for an AI-native travel platform. The focus is on UI craft, design detail, and seamless integration of advanced tooling like Remotion for video rendering.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Pixel-Perfect Invite Form**: Faithfully recreates the provided invite form design, including:
+  - Theme selection (supports both MP4 video and image backgrounds)
+  - Cover image upload (separate from background theme)
+  - Event Name, Start Date, Description, Capacity, and Require Approval fields
+  - Responsive, clean, and accessible layout
+- **MP4 & Image Theme Support**: Select an MP4 or image as the invite background. The preview updates instantly to reflect your choice.
+- **Save & Preview**:
+  - **Save Invite**: Persists form data using dummy data (see `creating.json` and `response.json` in `public/data/`)
+  - **Preview**: Instantly view the rendered invite at `/view` with all selected options
+- **Remotion Video Integration**:
+  - Invite is rendered as a video using [Remotion.dev](https://www.remotion.dev/)
+  - **Download as Video**: Export and download the invite as an MP4, including all content and background
+- **Modern Tech Stack**:
+  - [Next.js](https://nextjs.org/) (React framework)
+  - Tailwind CSS for styling
+  - Zustand for state management
+  - Remotion for video rendering
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+2. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+3. **Open** [https://often-xi.vercel.app](https://often-xi.vercel.app) to view the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Edit the invite form at `/create`
+- Preview the invite at `/view`
 
-## Learn More
+## 📦 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/create/` – Invite creation form UI
+- `src/app/view/` – Invite preview and video export
+- `src/components/` – UI components (form fields, Remotion player, etc.)
+- `public/data/creating.json` – Dummy data for invite creation
+- `public/data/response.json` – Dummy data for invite viewing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+- **Frontend**: Next.js, React
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Video**: Remotion

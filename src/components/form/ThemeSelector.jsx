@@ -56,19 +56,54 @@ export default function ThemeSelector() {
             <button
               onClick={() => setShowSelect(!showSelect)}
               className="flex items-center space-x-1 cursor-pointer"
+              type="button"
             >
               <ChevronsUpDown size={18} color="grey" />
             </button>
 
             {showSelect && (
-              <select
-                value={selectedTheme}
-                onChange={handleSelectChange}  // <-- FIXED here
-                className="absolute top-8 right-0 bg-white text-black text-sm border border-gray-300 rounded shadow-sm outline-none"
-              >
-                <option value="/People-walking.mp4">People walking video</option>
-                <option value="/Beach.mp4">Beach video</option>
-              </select>
+              <div className="absolute top-8 right-0 bg-white text-black text-sm border border-gray-300 rounded shadow-sm outline-none z-10 min-w-[180px]">
+                <div
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => {
+                    setSelectedTheme('/People-walking.mp4');
+                    setSelectedThemeType('video/mp4');
+                    setShowSelect(false);
+                  }}
+                >
+                  People walking video
+                </div>
+                <div
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => {
+                    setSelectedTheme('/Beach.mp4');
+                    setSelectedThemeType('video/mp4');
+                    setShowSelect(false);
+                  }}
+                >
+                  Beach video
+                </div>
+                <div
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => {
+                    setSelectedTheme('/mountain.jpg');
+                    setSelectedThemeType('video/mp4');
+                    setShowSelect(false);
+                  }}
+                >
+                  Mountain Photo
+                </div>
+                <div
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => {
+                    setSelectedTheme('/Beach.jpg');
+                    setSelectedThemeType('video/mp4');
+                    setShowSelect(false);
+                  }}
+                >
+                  Beach Photo
+                </div>
+              </div>
             )}
           </div>
         </div>

@@ -92,13 +92,13 @@ export default function CreatePage() {
           <div className='w-full flex justify-center gap-1 mt-4'>
             <button
               onClick={handleCreateEvent}
-              className="w-1/3 bg-gray-100 text-black font-semibold py-3 rounded-lg cursor-pointer"
+              className="w-1/2 bg-gray-100 text-black font-semibold py-3 rounded-lg cursor-pointer"
             >
               Create Event
             </button>
             <button
               onClick={handleCreateEvent}
-              className="w-1/3 bg-gray-100 text-black font-semibold py-3 rounded-lg cursor-pointer"
+              className="w-1/2 bg-gray-100 text-black font-semibold py-3 rounded-lg cursor-pointer"
             >
               Preview
             </button>

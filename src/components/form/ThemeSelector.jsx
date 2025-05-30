@@ -41,7 +41,7 @@ export default function ThemeSelector() {
 
   return (
     <div className="flex w-full items-stretch h-[50px] gap-1">
-      <div className="flex w-[87%] items-center bg-[#2B0E3D] px-2 rounded-lg gap-2 h-full">
+      <div className="flex w-[87%] items-center bg-white/10 px-2 rounded-lg gap-2 h-full">
         <PanelTop size={36} color="grey" />
 
         <div className="flex justify-between items-center w-full">
@@ -87,7 +87,7 @@ export default function ThemeSelector() {
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={() => {
                     setSelectedTheme('/mountain.jpg');
-                    setSelectedThemeType('video/mp4');
+                    setSelectedThemeType('image');
                     setShowSelect(false);
                   }}
                 >
@@ -97,7 +97,7 @@ export default function ThemeSelector() {
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={() => {
                     setSelectedTheme('/Beach.jpg');
-                    setSelectedThemeType('video/mp4');
+                    setSelectedThemeType('image');
                     setShowSelect(false);
                   }}
                 >
@@ -110,7 +110,7 @@ export default function ThemeSelector() {
       </div>
 
       <div
-        className="flex items-center justify-center w-[13%] bg-[#2B0E3D] rounded-lg h-full cursor-pointer"
+        className="flex items-center justify-center w-[13%] bg-white/10 rounded-lg h-full cursor-pointer"
         onClick={triggerFileInput}
       >
         <Shuffle size={18} color="grey" />

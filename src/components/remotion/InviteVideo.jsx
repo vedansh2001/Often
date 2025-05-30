@@ -24,13 +24,11 @@ export const InviteVideo = () => {
   const isImage = selectedThemeType?.startsWith('image');
   const isVideo = selectedThemeType?.startsWith('video');
 
-  // Animation timings (in frames) - for 5 second video (150 frames at 30fps)
-  const titleStart = 30; // 1 second
-  const detailsStart = 45; // 1.5 seconds  
-  const statusStart = 90; // 3 seconds
-  const particlesStart = 30; // 1 second (same as title)
+  const titleStart = 0; 
+  const detailsStart = 10; 
+  const statusStart = 60; 
+  const particlesStart = 0; 
 
-  // Title animation
   const titleProgress = spring({
     frame: frame - titleStart,
     fps,

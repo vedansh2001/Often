@@ -17,11 +17,21 @@ export default function ViewInvitePage() {
   } = useInviteStore()
 
   useEffect(() => {
-    const responseData = localStorage.getItem('response')
-    if (responseData) {
+    // Try to load from 'creating' first, fallback to 'response' for backward compatibility
+    const creatingData = typeof window !== 'undefined' ? localStorage.getItem('creating') : null;
+    const responseData = typeof window !== 'undefined' ? localStorage.getItem('response') : null;
+    let parsed = null;
+    if (creatingData) {
       try {
-        const parsed = JSON.parse(responseData)
-        setStateFromResponse(parsed) // ✅ Load response.json into store
+        parsed = JSON.parse(creatingData);
+        setStateFromResponse(parsed);
+      } catch (error) {
+        console.error('Failed to parse creating.json:', error);
+      }
+    } else if (responseData) {
+      try {
+        parsed = JSON.parse(responseData);
+        setStateFromResponse(parsed); // ✅ Load response.json into store
       } catch (error) {
         console.error('Failed to parse response.json:', error)
       }

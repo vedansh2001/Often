@@ -54,3 +54,11 @@ This project is a pixel-perfect, modern invite form built as part of a frontend 
 - **Styling**: Tailwind CSS
 - **State Management**: Zustand
 - **Video**: Remotion
+
+## 🖼️ Screenshots
+
+Below are sample screenshots of the Invite Form and Remotion Video features:
+
+| Invite Form View | Remotion Video Preview |
+|:---:|:---:|
+| ![Invite Form Screenshot](public/View.png) | ![Remotion Video Screenshot](public/remotion_video.png) |

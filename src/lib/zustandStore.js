@@ -16,7 +16,7 @@ const useInviteStore = create((set) => ({
   endTime: '',
   image: '/Cover_Image.png',
   showSelect: false,
-  selectedTheme: '',
+  selectedTheme: 'Select',
   selectedThemeType: '',
   price: 'Free',
   isEditing: false,

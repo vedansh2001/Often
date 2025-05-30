@@ -36,12 +36,13 @@ export default function EventDetails() {
       />
 
       <div className="space-x-3 flex">
-        <div className="w-[75%] bg-white/10 rounded-lg pl-4 pr-1 py-1 space-y-1">
-          
-          <div className="w-[100%] flex items-center gap-1">
+        <div className="w-[75%] bg-white/10 rounded-lg pl-4 pr-1 py-1 space-y-1 relative">
+          {/* Dotted line connecting the circles */}
+          <div className="absolute left-5 top-7 h-5 border-l-2 border-dotted border-gray-400 z-0"></div>
+          <div className="w-[100%] flex items-center gap-1 relative z-10">
             <div className="w-full flex items-center justify-between gap-1">
               <label className="text-sm text-white flex items-center gap-1">
-                <Circle  size={8} color="grey" className=" fill-grey" />
+                <Circle size={9} className="fill-gray-500" />
                 Start
               </label>
               <div className="flex gap-1" >
@@ -61,10 +62,10 @@ export default function EventDetails() {
             </div>
           </div>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 relative z-10">
             <div className="w-full flex justify-between items-center gap-1">
               <label className="text-sm text-white flex items-center gap-1">
-                <Circle size={8} color="grey" />
+                <Circle size={9} color="grey" />
                 End
               </label>
               <div className="flex gap-1" >
@@ -88,8 +89,8 @@ export default function EventDetails() {
 
         <div className="w-[25%] bg-white/10 rounded-lg p-2 grid grid-rows-3">
           <Globe size={16} color="grey"/>
-          <p>GMT+05:30p</p>
-          <p>Calcutta</p>
+          <p className="text-sm" >GMT+05:30</p>
+          <p className="text-sm" >Calcutta</p>
         </div>
       </div>
 

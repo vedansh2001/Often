@@ -41,7 +41,10 @@ export default function ConfigSettings() {
       ) : (
         <div
           className="flex items-center gap-1 cursor-pointer"
-          onClick={() => setIsEditing(true)}
+          onClick={() => {
+            setIsEditing(true);
+            setPrice("");
+          }}
         >
           <span className="text-sm">{price}</span>
           <Pencil size={14} color="grey" />
@@ -57,7 +60,7 @@ export default function ConfigSettings() {
       </label>
 
       <button
-        onClick={() => setIsApproved(!isApproved)}
+        onClick={() => {setIsApproved(!isApproved)}}
         className={`w-10 h-5 rounded-full p-1 duration-200 ${
           isApproved ? "bg-green-500" : "bg-gray-500"
         }`}
@@ -92,7 +95,10 @@ export default function ConfigSettings() {
             <Pencil
               size={14}
               className="cursor-pointer"
-              onClick={() => setIsEditingCapacity(true)}
+              onClick={() => {
+                setIsEditingCapacity(true);
+                setCapacity("");
+              }}
             />
           </>
         )}

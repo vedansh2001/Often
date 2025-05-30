@@ -1,9 +1,9 @@
 'use client'
 
-import CoverImage from '../../components/Form/CoverImage.jsx'
-import ThemeSelector from '../../components/Form/ThemeSelector.jsx'
-import EventDetails from '../../components/Form/EventDetails'
-import ConfigSettings from '../../components/Form/ConfigSettings'
+import CoverImage from '../../components/form/CoverImage.jsx'
+import ThemeSelector from '../../components/form/ThemeSelector.jsx'
+import EventDetails from '../../components/form/EventDetails'
+import ConfigSettings from '../../components/form/ConfigSettings'
 import { Globe, ChevronDown } from "lucide-react"
 import useInviteStore from '../../lib/zustandStore'
 import { useRouter } from 'next/navigation'

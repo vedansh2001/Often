@@ -1,15 +1,9 @@
 'use client'
 import { Ticket, UserRoundCheck, ArrowUpToLine, Pencil } from "lucide-react";
-import { useState } from "react";
 import useInviteStore from '../../lib/zustandStore';
 
 export default function ConfigSettings() {
 
-  // const [isEditing, setIsEditing] = useState(false);
-  // const [price, setPrice] = useState("Free");
-  // const [isApproved, setIsApproved] = useState(false);
-  // const [isEditingCapacity, setIsEditingCapacity] = useState(false);
-  // const [capacity, setCapacity] = useState("Unlimited");
 
   
   const isEditing = useInviteStore((state) => state.isEditing);

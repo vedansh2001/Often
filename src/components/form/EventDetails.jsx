@@ -18,11 +18,6 @@ export default function EventDetails() {
   const setLocation = useInviteStore((state) => state.setLocation);
   const setDescription = useInviteStore((state) => state.setDescription);
 
-  // const [startDate, setStartDate] = useState("Thu, May 29");
-  // const [startTime, setStartTime] = useState("03:30 PM");
-  // const [endDate, setEndDate] = useState("Thu, May 29");
-  // const [endTime, setEndTime] = useState("04:30 PM");
-
   useEffect(() => {
     const now = new Date();
     setStartDate(now.toISOString().split('T')[0]);
@@ -30,27 +25,6 @@ export default function EventDetails() {
     setEndDate(now.toISOString().split('T')[0]);
     setEndTime(now.toTimeString().slice(0, 5));
   }, []);
-
-  // const formatDate = (dateString) => {
-  //   const dateObj = new Date(dateString);
-  //   return dateObj.toLocaleDateString('en-US', { 
-  //     weekday: 'short', 
-  //     month: 'short', 
-  //     day: 'numeric' 
-  //   });
-  // };
-
-  // const formatTime = (timeString) => {
-  //   const [hours, minutes] = timeString.split(':');
-  //   const timeObj = new Date();
-  //   timeObj.setHours(parseInt(hours), parseInt(minutes));
-  //   return timeObj.toLocaleTimeString('en-US', { 
-  //     hour: 'numeric', 
-  //     minute: '2-digit',
-  //     hour12: true 
-  //   });
-  // };
-
   
 
   return (

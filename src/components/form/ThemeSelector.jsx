@@ -14,7 +14,6 @@ export default function ThemeSelector() {
 
   const fileInputRef = useRef(null);
 
-  // Handles file upload from file input
   const handleThemeUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -25,11 +24,9 @@ export default function ThemeSelector() {
     }
   };
 
-  // Handles selecting a theme from dropdown options
   const handleSelectChange = (e) => {
     const url = e.target.value;
     setSelectedTheme(url);
-    // Assuming videos for these options; if you add images, adjust accordingly
     if (url.endsWith('.mp4')) {
       setSelectedThemeType('video/mp4');
     } else {
@@ -44,7 +41,6 @@ export default function ThemeSelector() {
 
   return (
     <div className="flex w-full items-stretch h-[50px] gap-1">
-      {/* Theme display section */}
       <div className="flex w-[87%] items-center bg-[#2B0E3D] px-2 rounded-lg gap-2 h-full">
         <PanelTop size={36} color="grey" />
 
@@ -78,13 +74,11 @@ export default function ThemeSelector() {
         </div>
       </div>
 
-      {/* Shuffle icon section */}
       <div
         className="flex items-center justify-center w-[13%] bg-[#2B0E3D] rounded-lg h-full cursor-pointer"
         onClick={triggerFileInput}
       >
         <Shuffle size={18} color="grey" />
-        {/* Hidden file input */}
         <input
           type="file"
           ref={fileInputRef}

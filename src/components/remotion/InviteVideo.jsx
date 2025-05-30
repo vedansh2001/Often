@@ -3,19 +3,6 @@ import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } fr
 import { useState, useEffect } from 'react';
 import useInviteStore from '../../lib/zustandStore';
 
-// Mock store for demo - replace with your actual store
-// const useInviteStore = () => ({
-//   startDate: '2025-06-15',
-//   startTime: '7:00 PM',
-//   endDate: '2025-06-15',
-//   endTime: '11:00 PM',
-//   selectedTheme: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&h=1080&fit=crop',
-//   selectedThemeType: 'image/jpeg',
-//   price: '$25',
-//   isEditing: false,
-//   isApproved: true,
-//   capacity: '100 people',
-// });
 
 export const InviteVideo = () => {
   const frame = useCurrentFrame();
@@ -64,7 +51,6 @@ export const InviteVideo = () => {
     extrapolateRight: 'clamp',
   });
 
-  // Details animation (staggered) - faster intervals for 5 second video
   const detailItems = [
     { label: 'Start', value: `${startDate} at ${startTime}`, delay: 0 },
     { label: 'End', value: `${endDate} at ${endTime}`, delay: 8 },
@@ -72,7 +58,6 @@ export const InviteVideo = () => {
     { label: 'Capacity', value: capacity, delay: 24 },
   ];
 
-  // Status animation
   const statusProgress = spring({
     frame: frame - statusStart,
     fps,
@@ -82,7 +67,6 @@ export const InviteVideo = () => {
     },
   });
 
-  // Floating particles animation for images
   const particleCount = 12;
   const particles = Array.from({ length: particleCount }, (_, i) => ({
     id: i,
@@ -93,7 +77,6 @@ export const InviteVideo = () => {
     offsetY: (i % 3) * 30,
   }));
 
-  // Background zoom animation for images
   const backgroundScale = isImage ? interpolate(
     frame,
     [0, durationInFrames],
@@ -104,7 +87,6 @@ export const InviteVideo = () => {
     }
   ) : 1;
 
-  // Shimmer effect for images
   const shimmerProgress = (frame * 0.02) % 2;
 
   return (
@@ -165,7 +147,6 @@ export const InviteVideo = () => {
         />
       )}
 
-      {/* Animated gradient overlay */}
       <div
         style={{
           background: `linear-gradient(135deg, 
@@ -179,7 +160,6 @@ export const InviteVideo = () => {
         }}
       />
 
-      {/* Floating particles for images */}
       {isImage && frame > particlesStart && particles.map((particle) => {
         const particleFrame = frame - particlesStart - particle.delay;
         if (particleFrame < 0) return null;
@@ -212,7 +192,6 @@ export const InviteVideo = () => {
         );
       })}
 
-      {/* Main Content */}
       <div
         style={{
           zIndex: 4,
@@ -227,7 +206,6 @@ export const InviteVideo = () => {
           textAlign: 'center',
         }}
       >
-        {/* Animated Title */}
         {frame > titleStart && (
           <div
             style={{
@@ -263,7 +241,6 @@ export const InviteVideo = () => {
           </div>
         )}
 
-        {/* Staggered Details */}
         <div style={{ marginBottom: '40px' }}>
           {detailItems.map((item, index) => {
             const itemFrame = frame - (detailsStart + item.delay);
@@ -311,7 +288,6 @@ export const InviteVideo = () => {
           })}
         </div>
 
-        {/* Animated Status */}
         {frame > statusStart && (
           <div
             style={{
@@ -361,7 +337,6 @@ export const InviteVideo = () => {
         )}
       </div>
 
-      {/* Corner decorations */}
       <div
         style={{
           position: 'absolute',

@@ -24,7 +24,6 @@ const useInviteStore = create((set) => ({
   isEditingCapacity: false,
   capacity: 'Unlimited',
 
-  // Setters
   setEventName: (name) => set({ eventName: name }),
   setEventDate: (date) => set({ eventDate: date }),
   setNights: (n) => set({ nights: n }),
@@ -49,7 +48,6 @@ const useInviteStore = create((set) => ({
   setIsEditingCapacity: (value) => set({ isEditingCapacity: value }),
   setCapacity: (value) => set({ capacity: value }),
 
-  // ✅ New action to set entire state (for response.json)
   setStateFromResponse: (data) => set(() => ({ ...data })),
 }));
 

@@ -35,59 +35,59 @@ export default function EventDetails() {
         className="w-full bg-transparent text-2xl font-bold focus:outline-none"
       />
 
-      <div className="space-x-3 flex">
-        <div className="w-[75%] bg-white/10 rounded-lg pl-4 pr-1 py-1 space-y-1 relative">
-          {/* Dotted line connecting the circles */}
-          <div className="absolute left-5 top-7 h-5 border-l-2 border-dotted border-gray-400 z-0"></div>
-          <div className="w-[100%] flex items-center gap-1 relative z-10">
-            <div className="w-full flex items-center justify-between gap-1">
+      <div className="space-x-0 md:space-x-3 flex flex-col md:flex-row">
+        <div className="w-full md:w-[75%] bg-white/10 rounded-lg pl-4 pr-1 py-1 space-y-1 relative">
+          {/* Dotted line connecting the circles - hidden on small screens */}
+          <div className="absolute left-5 top-7 h-5 border-l-2 border-dotted border-gray-400 z-0 hidden sm:block"></div>
+          <div className="w-full flex items-center gap-1 relative z-10">
+            <div className="w-full flex items-center justify-between gap-1 flex-col sm:flex-row">
               <label className="text-sm text-white flex items-center gap-1">
                 <Circle size={9} className="fill-gray-500" />
                 Start
               </label>
-              <div className="flex gap-1" >
-              <input
-                type="date"
-                value={startDate}
-                onChange={(e) => setStartDate(e.target.value)}
-                className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white"
-              />
-              <input
-                type="time"
-                value={startTime}
-                onChange={(e) => setStartTime(e.target.value)}
-                className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white"
-              />
+              <div className="flex gap-1 w-full sm:w-auto mt-2 sm:mt-0">
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white w-1/2 sm:w-auto"
+                />
+                <input
+                  type="time"
+                  value={startTime}
+                  onChange={(e) => setStartTime(e.target.value)}
+                  className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white w-1/2 sm:w-auto"
+                />
               </div>
             </div>
           </div>
 
           <div className="flex items-center gap-1 relative z-10">
-            <div className="w-full flex justify-between items-center gap-1">
+            <div className="w-full flex justify-between items-center gap-1 flex-col sm:flex-row">
               <label className="text-sm text-white flex items-center gap-1">
                 <Circle size={9} color="grey" />
                 End
               </label>
-              <div className="flex gap-1" >
-              <input
-                type="date"
-                value={endDate}
-                onChange={(e) => setEndDate(e.target.value)}
-                className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white"
-              />
-              <input
-                type="time"
-                value={endTime}
-                onChange={(e) => setEndTime(e.target.value)}
-                className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white"
-              />
+              <div className="flex gap-1 w-full sm:w-auto mt-2 sm:mt-0">
+                <input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white w-1/2 sm:w-auto"
+                />
+                <input
+                  type="time"
+                  value={endTime}
+                  onChange={(e) => setEndTime(e.target.value)}
+                  className="col-span-2 px-1 py-1 rounded-lg bg-white/10 text-white w-1/2 sm:w-auto"
+                />
               </div>
             </div>
           </div>
 
         </div>
 
-        <div className="w-[25%] bg-white/10 rounded-lg p-2 grid grid-rows-3">
+        <div className="w-full md:w-[25%] bg-white/10 rounded-lg p-2 grid grid-rows-3 mt-2 md:mt-0">
           <Globe size={16} color="grey"/>
           <p className="text-sm" >GMT+05:30</p>
           <p className="text-sm" >Calcutta</p>

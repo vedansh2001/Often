@@ -3,7 +3,7 @@
 import { ImageUp } from "lucide-react";
 import Image from 'next/image';
 import { useRef } from 'react';
-import useInviteStore from '@/lib/zustandStore';
+import useInviteStore from '../../lib/zustandStore';
 
 export default function CoverImage() {
   const image = useInviteStore((state) => state.image);

@@ -1,7 +1,7 @@
 'use client';
 import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
 import { useState, useEffect } from 'react';
-import useInviteStore from '@/lib/zustandStore';
+import useInviteStore from '../../lib/zustandStore';
 
 // Mock store for demo - replace with your actual store
 // const useInviteStore = () => ({

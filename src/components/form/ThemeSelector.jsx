@@ -2,7 +2,7 @@
 
 import { PanelTop, ChevronsUpDown, Shuffle } from "lucide-react";
 import { useRef } from "react";
-import useInviteStore from '@/lib/zustandStore';
+import useInviteStore from '../../lib/zustandStore';
 
 export default function ThemeSelector() {
   const showSelect = useInviteStore((state) => state.showSelect);

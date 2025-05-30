@@ -1,7 +1,7 @@
 'use client'
 import { Ticket, UserRoundCheck, ArrowUpToLine, Pencil } from "lucide-react";
 import { useState } from "react";
-import useInviteStore from '@/lib/zustandStore';
+import useInviteStore from '../../lib/zustandStore';
 
 export default function ConfigSettings() {
 

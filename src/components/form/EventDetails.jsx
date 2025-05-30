@@ -1,7 +1,7 @@
 'use client'
 import { MapPin, BookText, Circle, Globe } from "lucide-react";
 import { useEffect } from "react";
-import useInviteStore from '@/lib/zustandStore';
+import useInviteStore from '../../lib/zustandStore';
 
 export default function EventDetails() {
   const startDate = useInviteStore((state) => state.startDate);

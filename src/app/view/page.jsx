@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect } from 'react'
-import CoverImage from '@/components/Form/CoverImage.jsx'
-import ThemeSelector from '@/components/Form/ThemeSelector.jsx'
-import EventDetails from '@/components/Form/EventDetails'
-import ConfigSettings from '@/components/Form/ConfigSettings'
+import CoverImage from '../../components/Form/CoverImage.jsx'
+import ThemeSelector from '../../components/Form/ThemeSelector.jsx'
+import EventDetails from '../../components/Form/EventDetails'
+import ConfigSettings from '../../components/Form/ConfigSettings'
 import { Globe, ChevronDown } from 'lucide-react'
-import useInviteStore from '@/lib/zustandStore'
-import { VideoPlayer } from '@/components/remotion/VideoPlayer'
+import useInviteStore from '../../lib/zustandStore'
+import { VideoPlayer } from '../../components/remotion/VideoPlayer'
 
 export default function ViewInvitePage() {
   const {
